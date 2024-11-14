@@ -1,0 +1,4 @@
+# 忽略 build 和 devel 文件夹
+build/
+devel/
+

@@ -1,8 +1,0 @@
-prefix=/home/zhao/WS/msfl_ws/install
-
-Name: ucar_navigation
-Description: Description of ucar_navigation
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

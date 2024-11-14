@@ -1,2 +1,0 @@
-dwa_local_planner:gazebo_pkg:mecanum_sim/nexus_4wd_mecanum_description:mecanum_sim/nexus_4wd_mecanum_gazebo:move_base:qr:qr_msgs:robot_localization:teb_local_planner:tf:ucar_bringup:ucar_navigation:urdf01_rviz:usb_cam:velodyne_simulator/velodyne_description:velodyne_simulator/velodyne_gazebo_plugins:velodyne_simulator/velodyne_simulator:ydlidar
--DCATKIN_DEVEL_PREFIX=/home/zhao/WS/msfl_ws/devel -DCMAKE_INSTALL_PREFIX=/home/zhao/WS/msfl_ws/install -G Unix Makefiles
