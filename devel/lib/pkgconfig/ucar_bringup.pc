@@ -1,0 +1,8 @@
+prefix=/home/zhao/WS/msfl_ws/devel
+
+Name: ucar_bringup
+Description: Description of ucar_bringup
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

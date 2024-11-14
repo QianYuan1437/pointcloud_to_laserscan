@@ -1,0 +1,23 @@
+<launch>
+  <!-- <include file="$(find ydlidar)/launch/ydlidar.launch" /> -->
+
+    <node name="cartographer_node" pkg="cartographer_ros"
+      type="cartographer_node" args="
+          -configuration_directory $(find ucar_navigation)/config/cartographer
+          -configuration_basename 15th_car.lua"
+      output="screen">
+    <remap from="scan" to="/scan" /> 
+    <remap from="imu" to="/imu" /> //自己加的
+
+  </node>
+
+  <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"
+      type="cartographer_occupancy_grid_node" args="-resolution 0.04" />
+
+  <!-- <node name="rviz" pkg="rviz" type="rviz" 
+      args="-d $(find ucar_navigation)/configuration_files/cartographer.rviz" /> -->
+
+    <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /odom 100" />
+
+</launch>
+

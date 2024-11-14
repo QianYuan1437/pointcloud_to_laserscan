@@ -1,0 +1,32 @@
+<launch>
+	<!-- This file contains all the static tf publisher -->
+
+  <!-- Devices, Sensors -->
+  <!-- those are measured physical distance between sensors and base center -->
+
+  <node pkg="tf" type="static_transform_publisher" name="from_baselink_to_usbcam"
+    args="0.14 0.00 0.12 0.0 0.0  0.0 /base_link /usb_cam 20" />
+  <node pkg="tf" type="static_transform_publisher" name="from_baselink_to_imu"
+    args="0.05 -0.05 0.05 0.0 0.0 0.0 /base_link /imu 20" />
+  <node pkg="tf" type="static_transform_publisher" name="from_baselink_to_footprint"
+    args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /base_footprint 20" />
+  <node pkg="tf" type="dynamic_base_laser_link" name="base_link_to_laser">
+    	<rosparam command="load" file="/home/iflytek/19th_main_final/src/tf/config/laser_tf.yaml"/>
+	</node>
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+  args="0.011 0 0.165 -0.07 0.0  0.0 /base_link /base_laser_link 100" /> -->
+</launch>
+
+<!-- <launch> -->
+	<!-- This file contains all the static tf publisher -->
+
+  <!-- Devices, Sensors -->
+  <!-- those are measured physical distance between sensors and base center -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser"
+    args="0.05 0 0.165 0.01 0.0  0.0 /base_link /base_laser_link 20" />
+  <node pkg="tf" type="static_transform_publisher" name="from_baselink_to_usbcam"
+    args="0.14 0.00 0.13 0.0 0.0  0.0 /base_link /usb_cam 20" />
+  <node pkg="tf" type="static_transform_publisher" name="from_baselink_to_imu"
+    args="0.05 -0.05 0.05 0.0 0.0 0.0 /base_link /imu 20" /> -->
+
+<!-- </launch> -->

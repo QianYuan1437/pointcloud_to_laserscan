@@ -1,0 +1,5 @@
+<robot name="my_car" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- 1.文件包含 -->
+    <xacro:include filename="/home/zhao/WS/msfl_ws/src/urdf01_rviz/urdf/xacro/demo02_field.urdf.xacro" />
+    <xacro:include filename="/home/zhao/WS/msfl_ws/src/urdf01_rviz/urdf/xacro/demo03_macro.urdf.xacro" />
+</robot>

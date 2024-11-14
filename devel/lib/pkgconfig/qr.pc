@@ -1,0 +1,8 @@
+prefix=/home/zhao/WS/msfl_ws/devel
+
+Name: qr
+Description: Description of qr
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: cv_bridge image_transport roscpp rospy sensor_msgs std_msgs qr_msgs

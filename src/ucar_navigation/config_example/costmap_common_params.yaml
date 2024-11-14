@@ -1,0 +1,21 @@
+global_frame: map
+robot_base_frame: base_link
+transform_tolerance: 0.2 
+width: 6.065
+height: 6.065
+resolution: 0.04
+obstacle_range: 6.0
+raytrace_range: 6.0
+observation_sources: scan
+scan: {
+data_type: LaserScan, 
+topic: /scan, 
+marking: true,
+clearing: true, 
+obstacle_range: 6.0,
+raytrace_range: 6.0
+ }
+map_type: costmap
+footprint: [[0.17, 0.12], [0.17, -0.12],
+  [-0.17, -0.12], [-0.17, 0.12]]
+footprint_padding: 0.01

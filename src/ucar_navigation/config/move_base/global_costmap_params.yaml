@@ -1,0 +1,17 @@
+global_costmap:
+  global_frame: modifier_map
+  # robot_base_frame: base_link  #自己加的
+  update_frequency: 4.0 #10.0 全局代价地图的更新频率
+  publish_frequency: 4.0 #10.0 全局代价地图发布的更新频率
+  transform_tolerance: 0.5 #两个坐标系之间能够转换的时间差
+  inflation_radius: 0.20 #0.14 #障碍物的膨胀半径
+  cost_scaling_factor: 60.0 #代价地图的代价放大系数
+  # static_map: true
+ 
+  plugins:
+    - {name: static_layer,       type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer,        type: "costmap_2d::ObstacleLayer"}
+    - {name: costmap_prohibition_layer,        type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}     
+    - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}
+
+

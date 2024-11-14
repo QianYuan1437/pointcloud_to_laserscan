@@ -1,0 +1,24 @@
+local_costmap:
+  global_frame: map
+  # robot_base_frame: base_link
+
+  update_frequency: 15.0 #局部代价地图的更新频率
+  publish_frequency: 15.0 #局部代价地图发布的频率
+  transform_tolerance: 0.2  #变换的缓冲容忍度
+
+  # static_map: false  #启动后将使用静态地图
+  rolling_window: true #局部代价地图是否使用滚动窗口
+  width: 2.0 #局部代价地图的宽度
+  height: 2.0 #局部代价地图的高度
+  resolution: 0.02 #局部代价地图的分辨率  #0.04
+  footprint: [[0.175, 0.13], [0.175, -0.13], [-0.175, -0.13], [-0.175, 0.13]] #机器人的底部轮廓，用于计算机器人与障碍物之间的距离
+  # robot_radius: 0.1
+
+  inflation_radius: 0.10 #障碍物的膨胀半径175 #0.185
+  cost_scaling_factor: 40.0 #代价地图的代价放大系数
+  # footprint_padding: 0.05
+  plugins:
+    # - {name: static_map,       type: "costmap_2d::StaticLayer"}
+    - {name: obstacle_layer,        type: "costmap_2d::ObstacleLayer"}
+    # - {name: costmap_prohibition_layer,        type: "costmap_prohibition_layer_namespace::CostmapProhibitionLayer"}      
+    - {name: inflation_layer,        type: "costmap_2d::InflationLayer"}

@@ -1,0 +1,26 @@
+<launch>
+
+    <!-- 设置地图的配置文件 -->
+    <arg name="map" default="cartomap3.yaml" />
+
+    <!-- 运行地图服务器，并且加载设置的地图-->
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find ucar_navigation)/maps/$(arg map)"/>
+    <!-- 运行ekf滤波 -->
+    <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
+        <rosparam command="load" file="$(find ucar_navigation)/config/localization/ekf_params_twodom_imu.yaml"/>
+		<remap from="odom" to="odom_raw"/>
+		<remap from="odometry/filtered" to="/odom" />
+    </node>
+
+
+
+    <!-- 运行RTS节点 -->
+    <!-- <include file="$(find ucar_navigation)/launch/robort_rts.launch"/> -->
+
+    <!-- 启动AMCL节点 -->
+    <include file="$(find ucar_navigation)/launch/amcl.launch" />
+    
+    
+</launch>
+
+
