@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<robot name="my_car" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- 引用 VLP-16 雷达的 xacro 文件 -->
+    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro" />
+
+    <!-- 引用imu的xacro文件 -->
+    <xacro:include filename="$(find urdf01_rviz)/urdf/xacro/imu_gazebo.xacro" />
+
+    <!-- 封装变量、常量 -->
+    <xacro:property name="PI" value="3.14159265358979"/>
+
+    <!-- 定义常用材质 -->
+    <material name="black" global="true">
+        <color rgba="0.0 0.0 0.0 1.0" />
+    </material>
+
+    <material name="yellow" global="true">
+        <color rgba="0.5 0.3 0.0 0.5" />
+    </material>
+
+    <material name="red" global="true">
+        <color rgba="0.8 0.2 0.0 0.8" />
+    </material>
+
+    <!-- 底盘属性 -->
+    <xacro:property name="base_footprint_radius" value="0.001" />
+    <xacro:property name="base_link_radius" value="0.1" />
+    <xacro:property name="base_link_length" value="0.08" />
+    <xacro:property name="earth_space" value="0.015" />
+
+    <!-- 底盘 -->
+    <link name="base_footprint">
+        <visual>
+            <geometry>
+                <sphere radius="${base_footprint_radius}" />
+            </geometry>
+        </visual>
+    </link>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder radius="${base_link_radius}" length="${base_link_length}" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="yellow" />
+        </visual>
+    </link>
+
+    <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link" />
+        <origin xyz="0 0 ${earth_space + base_link_length / 2}" />
+    </joint>
+
+    <!-- 添加 IMU 模型 -->
+    <xacro:property name="imu_hight" value="0.05" />
+    <xacro:property name="imu_x" value="0.0" />
+    <xacro:property name="imu_y" value="0.0" />
+    <xacro:property name="imu_z" value="${base_link_length / 2 + imu_hight / 2}" />
+    <xacro:imu prefix="imu" />
+
+    <!-- IMU link -->
+    <joint name="imu_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="imu_link" />
+        <origin xyz="${imu_x} ${imu_y} ${imu_z}" rpy="0 0 0" />
+    </joint>
+
+    <!-- 驱动轮属性 -->
+    <xacro:property name="wheel_radius" value="0.0325" />
+    <xacro:property name="wheel_length" value="0.015" />
+
+    <!-- 驱动轮宏 -->
+    <xacro:macro name="add_wheels" params="name flag">
+        <link name="${name}_wheel">
+            <visual>
+                <geometry>
+                    <cylinder radius="${wheel_radius}" length="${wheel_length}" />
+                </geometry>
+                <origin xyz="0.0 0.0 0.0" rpy="${PI / 2} 0.0 0.0" />
+                <material name="black" />
+            </visual>
+        </link>
+
+        <joint name="${name}_wheel2base_link" type="continuous">
+            <parent link="base_link" />
+            <child link="${name}_wheel" />
+            <origin xyz="0 ${flag * base_link_radius} ${-(earth_space + base_link_length / 2 - wheel_radius)}" />
+            <axis xyz="0 1 0" />
+        </joint>
+    </xacro:macro>
+
+    <!-- 左右驱动轮 -->
+    <xacro:add_wheels name="left" flag="1" />
+    <xacro:add_wheels name="right" flag="-1" />
+
+    <!-- 摄像头属性 -->
+    <xacro:property name="camera_length" value="0.01" />
+    <xacro:property name="camera_width" value="0.025" />
+    <xacro:property name="camera_height" value="0.025" />
+    <xacro:property name="camera_x" value="0.08" />
+    <xacro:property name="camera_y" value="0.0" />
+    <xacro:property name="camera_z" value="${base_link_length / 2 + camera_height / 2}" />
+
+    <!-- 摄像头 -->
+    <link name="camera">
+        <visual>
+            <geometry>
+                <box size="${camera_length} ${camera_width} ${camera_height}" />
+            </geometry>
+            <material name="black" />
+        </visual>
+    </link>
+
+    <joint name="camera2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="camera" />
+        <origin xyz="${camera_x} ${camera_y} ${camera_z}" />
+    </joint>
+
+    <!-- 雷达支架属性 -->
+    <xacro:property name="support_length" value="0.15" />
+    <xacro:property name="support_radius" value="0.01" />
+    <xacro:property name="support_x" value="0.0" />
+    <xacro:property name="support_y" value="0.0" />
+    <xacro:property name="support_z" value="${base_link_length / 2 + support_length / 2}" />
+
+    <!-- 雷达支架 -->
+    <link name="support">
+        <visual>
+            <geometry>
+                <cylinder radius="${support_radius}" length="${support_length}" />
+            </geometry>
+            <material name="red" />
+        </visual>
+    </link>
+
+    <joint name="support2base_link" type="fixed">
+        <parent link="base_link" />
+        <child link="support" />
+        <origin xyz="${support_x} ${support_y} ${support_z}" />
+    </joint>
+
+    <!-- VLP-16 3D 雷达 -->
+    <xacro:property name="laser_x" value="0.0" />
+    <xacro:property name="laser_y" value="0.0" />
+    <xacro:property name="laser_z" value="${support_length / 2}" />
+
+    <gazebo>
+        <plugin name="velodyne_gazebo_plugin" filename="libgazebo_ros_velodyne_laser.so">
+            <topicName>/velodyne_points</topicName>
+            <frameName>velodyne</frameName>
+        </plugin>
+    </gazebo>
+
+    <joint name="laser2support" type="fixed">
+        <parent link="support" />
+        <child link="velodyne_base_link" />
+        <origin xyz="${laser_x} ${laser_y} ${laser_z}" />
+    </joint>
+
+    <!-- 调用 VLP-16 雷达宏 -->
+    <xacro:VLP-16 parent="velodyne_base_link" name="velodyne" topic="/velodyne_points" organize_cloud="false" hz="10" lasers="16" samples="1875" collision_range="0.3" min_range="0.9" max_range="130.0" noise="0.008" min_angle="-${PI}" max_angle="${PI}" gpu="true" />
+
+</robot>
