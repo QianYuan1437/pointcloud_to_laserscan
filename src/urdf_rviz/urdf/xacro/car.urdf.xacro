@@ -5,7 +5,7 @@
     <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro" />
 
     <!-- 引用imu的xacro文件 -->
-    <xacro:include filename="$(find urdf01_rviz)/urdf/xacro/imu_gazebo.xacro" />
+    <xacro:include filename="$(find urdf_rviz)/urdf/xacro/imu_gazebo.xacro" />
 
     <!-- 封装变量、常量 -->
     <xacro:property name="PI" value="3.14159265358979"/>
@@ -56,7 +56,7 @@
 
     <!-- 添加 IMU 模型 -->
     <xacro:property name="imu_hight" value="0.05" />
-    <xacro:property name="imu_x" value="0.0" />
+    <xacro:property name="imu_x" value="-0.08" />
     <xacro:property name="imu_y" value="0.0" />
     <xacro:property name="imu_z" value="${base_link_length / 2 + imu_hight / 2}" />
     <xacro:imu prefix="imu" />
@@ -66,6 +66,13 @@
         <parent link="base_link" />
         <child link="imu_link" />
         <origin xyz="${imu_x} ${imu_y} ${imu_z}" rpy="0 0 0" />
+        <visual>
+            <origin rpy="0 0 0" xyz="${imu_x} ${imu_y} ${imu_z}" />
+            <geometry>
+                <box size="${imu_size} ${imu_size} ${imu_size}"/>
+            </geometry>                
+            <material name="red"/>
+        </visual>
     </joint>
 
     <!-- 驱动轮属性 -->
@@ -161,7 +168,5 @@
         <origin xyz="${laser_x} ${laser_y} ${laser_z}" />
     </joint>
 
-    <!-- 调用 VLP-16 雷达宏 -->
-    <xacro:VLP-16 parent="velodyne_base_link" name="velodyne" topic="/velodyne_points" organize_cloud="false" hz="10" lasers="16" samples="1875" collision_range="0.3" min_range="0.9" max_range="130.0" noise="0.008" min_angle="-${PI}" max_angle="${PI}" gpu="true" />
 
 </robot>

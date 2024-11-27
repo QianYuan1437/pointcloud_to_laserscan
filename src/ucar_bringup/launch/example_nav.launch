@@ -17,13 +17,11 @@
     <!-- ###################################### -->
 
     <!-- start navigation stack -->
-    <include file="$(find ucar_navigation)/launch/nav.launch" />
+    <include file="$(find ucar_navigation)/launch/nav_example.launch" />
 
     <!-- ###################################### -->
     <!-- ##       DECISION & LOGIC           ## -->
     <!-- ###################################### -->
-    <include file="$(find ucar_commander)/launch/ucar_commander.launch" />
-    <include file="$(find qr)/launch/qr.launch" />
 
     <!-- not used -->
 

@@ -1,0 +1,41 @@
+<launch>
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(find robot_description)/urdf/robot_car.xacro" />
+    <!-- 启动 gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+   	<arg name="world_name" value="$(find robot_description)/world/box_house.world" />
+    </include>
+
+    <!-- 在 gazebo 中显示机器人模型 -->
+    <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model mycar -param robot_description"  />
+
+    <!-- 配置 DiffDrive 插件 -->
+    <node name="diff_drive" pkg="gazebo_ros" type="gazebo_ros_diff_drive" output="screen">
+        <!-- 设置机器人模型的物理参数 -->
+        <param name="publishOdomTF" value="true" />
+        <param name="odometrySource" value="1" />
+        <param name="publishWheelTF" value="true" />
+        <param name="cmd_vel" value="cmd_vel" />
+        <param name="odometryTopic" value="odom" />
+        <param name="wheelSeparation" value="0.2" />
+        <param name="wheelDiameter" value="0.065" />
+        <param name="wheelAcceleration" value="1.8" />
+        <param name="wheelTorque" value="30" />
+        <param name="updateRate" value="100" />
+        <param name="leftJoint" value="left_wheel2base_link" />
+        <param name="rightJoint" value="right_wheel2base_link" />
+    </node>
+
+    <!-- 启动 RViz -->
+    <node pkg="rviz" type="rviz" name="rviz" />
+
+    <!-- 启动雷达数据发布节点 -->
+    <!-- 可选：如果雷达数据需要进行进一步处理，可以添加相应的节点 -->
+    <!-- 示例：如果使用激光扫描匹配器 -->
+    <node pkg="laser_scan_matcher" type="laser_scan_matcher_node" name="laser_scan_matcher" output="screen">
+        <param name="scan_topic" value="/scan"/>
+        <param name="base_frame" value="base_link"/>
+    </node>
+
+</launch>
+

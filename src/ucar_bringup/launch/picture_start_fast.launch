@@ -1,8 +1,0 @@
-<launch>
-    <include file="$(find usb_cam)/launch/usb_cam.launch" />
-    <include file="$(find rknn_ros)/launch/yolov5_fast.launch" />
-    <node pkg="image_detect" type="image_detect_all" name="image_detect_all" output="screen"/>
-    <include file="$(find laser_detection)/launch/laser_detection_4_1.launch"/>
-    <!-- <include file="$(find vision_pkg)/launch/vision_combine_lidar_5.0_.launch"/> -->
-    <include file="$(find vision_pkg)/launch/vision_combine_lidar_6.0_.launch"/>
-</launch>

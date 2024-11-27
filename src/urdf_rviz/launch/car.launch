@@ -1,9 +1,9 @@
 <launch>
 
     <!-- 设置参数 -->
-    <!-- <xacro:include filename="$(find urdf01_rviz)/urdf/xacro/car.urdf.xacro" /> -->
-    <param name="robot_description" textfile="$(find urdf01_rviz)/urdf/xacro/car.urdf" />
-    <!-- <param name="robot_description" command="$(find urdf01_rviz)/urdf/xacro/car.urdf.xacro" /> -->
+    <!-- <xacro:include filename="$(find urdf_rviz)/urdf/xacro/car.urdf.xacro" /> -->
+    <param name="robot_description" textfile="$(find urdf_rviz)/urdf/xacro/car.urdf" />
+    <!-- <param name="robot_description" command="$(find urdf_rviz)/urdf/xacro/car.urdf.xacro" /> -->
 
     <!-- 添加关节状态发布节点 -->
     <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
@@ -15,22 +15,22 @@
     <!-- <node pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" name="joint_state_publisher_gui" /> -->
 
     <!-- 启动 rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find urdf01_rviz)/config/show_mycar.rviz" />
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find urdf_rviz)/config/show_mycar.rviz" />
 
     <!-- 启动 Velodyne VLP-16 雷达驱动 -->
-    <node pkg="velodyne_driver" type="velodyne_node" name="velodyne_node" output="screen">
-        <!-- 你可能需要调整 IP 地址和端口 -->
+    <!-- 你可能需要调整 IP 地址和端口 -->
+    <!-- <node pkg="velodyne_driver" type="velodyne_node" name="velodyne_node" output="screen">
         <param name="device_ip" value="192.168.1.201" />
         <param name="frame_id" value="velodyne" />
         <param name="port" value="2368" />
         <param name="model" value="VLP16" />
-    </node>
+    </node> -->
 
     <!-- 启动 Velodyne 点云转换节点 -->
-    <node pkg="velodyne_pointcloud" type="transform" name="velodyne_transform" output="screen">
+    <!-- <node pkg="velodyne_pointcloud" type="transform" name="velodyne_transform" output="screen">
         <param name="frame_id" value="velodyne" />
         <remap from="velodyne_points" to="/velodyne_points" />
-    </node>
+    </node> -->
 
     <!-- 设置地图加载 -->
     <arg name="paused" default="false"/>

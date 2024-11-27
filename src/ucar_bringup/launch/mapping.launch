@@ -1,13 +1,31 @@
 <launch>
-  <include file="$(find ucar_bringup)/launch/static_tf.launch" />
-  <include file="$(find ydlidar)/launch/ydlidar.launch" />
-  <include file="$(find ucar_controller)/launch/base_driver.launch" />
-  <include file="$(find usb_cam)/launch/usb_cam.launch" />
-  <!-- 运行ekf滤波 --> 
-  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
-      <rosparam command="load" file="$(find ucar_navigation)/config/localization/ekf_params_twodom_imu.yaml"/>
-      <remap from="odom" to="odom_raw"/>
-  <remap from="odometry/filtered" to="/odom" /> 
-  </node>
-  
+    <!-- to start up the car -->
+    <!-- however, will not start room detection and voice recognition -->
+    <!-- so that their logs can be separated from navigation nodes -->
+
+	<!-- command line flags -->
+    <!-- not used -->
+	
+    <!-- ###################################### -->
+    <!-- ##       SIMULATION                 ## -->
+    <!-- ###################################### -->
+
+    <include file="$(find gazebo_pkg)/launch/empty_race_track.launch" />
+
+    <!-- ###################################### -->
+    <!-- ##       NAVIGATION STACK           ## -->
+    <!-- ###################################### -->
+
+    <!-- start navigation stack -->
+    <!-- <include file="$(find ucar_navigation)/launch/nav.launch" /> -->
+
+    <!-- start mappting -->
+    <include file="$(find ucar_navigation)/launch/gmapping.launch" />
+
+    <!-- ###################################### -->
+    <!-- ##       DECISION & LOGIC           ## -->
+    <!-- ###################################### -->
+
+    <!-- not used -->
+
 </launch>

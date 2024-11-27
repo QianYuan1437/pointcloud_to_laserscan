@@ -1,8 +1,0 @@
-prefix=/home/iflytek/task_ws/src/ucar_bringup/build/devel
-
-Name: ucar_bringup
-Description: Description of ucar_bringup
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

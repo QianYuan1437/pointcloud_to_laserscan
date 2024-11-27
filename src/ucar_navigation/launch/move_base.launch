@@ -1,25 +1,17 @@
 <launch>
 
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+    <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> -->
     <param name="base_local_planner" value="teb_local_planner/TebLocalPlannerROS" />
-    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
-    <!-- <param name="base_global_planner" value="astar_planner/AstarPlanner" /> -->
-    <rosparam file="$(find ucar_navigation)/config/move_base/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/prohibition_areas.yaml" command="load" ns="global_costmap/costmap_prohibition_layer" />
-    <!-- <rosparam file="$(find ucar_navigation)/config/move_base/prohibition_areas.yaml" command="load" ns="local_costmap/costmap_prohibition_layer" /> -->
-		
-    <!-- <rosparam file="$(find ucar_navigation)/config/move_base_s/costmap_converter_params.yaml" command="load" /> -->
-    <rosparam file="$(find ucar_navigation)/config/move_base/move_base_params.yaml" command="load" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/teb_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find ucar_navigation)/config/move_base/GlobalPlanner.yaml" command="load" />
-    <!-- <rosparam file="$(find ucar_navigation)/config/move_base/astar_param.yaml" command="load" /> -->
-    
+
+    <rosparam file="$(find ucar_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find ucar_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find ucar_navigation)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ucar_navigation)/config/global_costmap_params.yaml" command="load" />
+
+    <rosparam file="$(find ucar_navigation)/config/move_base_params.yaml" command="load" />
+    <!-- <rosparam file="$(find ucar_navigation)/config/dwa_local_planner_params.yaml" command="load" /> -->
+    <rosparam file="$(find ucar_navigation)/config/teb_local_planner_params.yaml" command="load" />
   </node>
   
 </launch>
-
-
-

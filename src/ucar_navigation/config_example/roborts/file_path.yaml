@@ -1,6 +1,0 @@
-#planning
-teb_file_path: /home/siliang/smartcar_ark/src/ucar_navigation/config/roborts/timed_elastic_band.prototxt
-local_planner_file_path: /home/siliang/smartcar_ark/src/ucar_navigation/config/roborts/local_planner.prototxt
-teb_test_file_path: /home/siliang/smartcar_ark/src/ucar_navigation/config/roborts/timed_elastic_band.prototxt
-
-combination_method: 2
