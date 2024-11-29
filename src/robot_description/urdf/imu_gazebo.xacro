@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu"> 
- 
+
     <!-- IMU 属性 -->
     <xacro:property name="imu_size"     value="0.1" />
     <xacro:property name="imu_hight"    value="0.1" />
     <xacro:property name="imu_x"        value="0.0" />
     <xacro:property name="imu_y"        value="0.0" />
     <xacro:property name="imu_z"        value="0.0" />
- 
+
+    <!-- 默认惯性参数 -->
     <xacro:macro name="default_inertial" params="mass">
         <inertial>
             <mass value="${mass}" />
@@ -15,7 +16,10 @@
         </inertial>
     </xacro:macro>
 
+    <!-- IMU 传感器宏 -->
     <xacro:macro name="imu" params="prefix:=imu">
+        
+        <!-- IMU 链接 -->
         <link name="imu_link">
             <visual>
                <origin rpy="0 0 0" xyz="${imu_x} ${imu_y} ${imu_z}" />
@@ -28,7 +32,15 @@
                 <box size="${imu_size} ${imu_size} ${imu_size}"/>
             </collision>
         </link>
-      
+
+        <!-- 关节连接 imu_link 和 base_link -->
+        <joint name="imu_to_base" type="fixed">
+            <parent link="base_link"/>
+            <child link="imu_link"/>
+            <origin rpy="0 0 0" xyz="${imu_x} ${imu_y} ${imu_z}"/>
+        </joint>
+
+        <!-- Gazebo 配置 -->
         <gazebo reference="${prefix}_link">
             <gravity>true</gravity>
             <sensor name="imu_sensor" type="imu">
@@ -48,6 +60,7 @@
                 <pose>0 0 0 0 0 0</pose>
             </sensor>
         </gazebo>
- 
+
     </xacro:macro>
+
 </robot>

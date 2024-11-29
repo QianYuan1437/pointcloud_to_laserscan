@@ -6,7 +6,7 @@
     <arg name="headless" default="false"/>
     <arg name="debug" default="false"/>
     <arg name="verbose" default="false"/>
-    <arg name="world_name" default="$(find robot_description)/world/room.world"/>
+    <arg name="world_name" default="$(find robot_description)/world/lab.world"/>
 
     <!-- Start gazebo and load the world -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch" >

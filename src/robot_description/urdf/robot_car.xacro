@@ -3,11 +3,22 @@
     <xacro:include filename="my_head.urdf.xacro" />
     <xacro:include filename="my_base.urdf.xacro" />
     <xacro:include filename="my_camera.urdf.xacro" />
-    <xacro:include filename="my_laser.urdf.xacro" />
+
+    <!-- 更新结构信息，以laser_support + velodyne 为构建，不需要自己写雷达仿真的xacro文件 -->
+    <!-- <xacro:include filename="my_laser.urdf.xacro" /> -->
+
     <xacro:include filename="move.urdf.xacro" />
-    
+    <xacro:include filename="imu_gazebo.xacro" />
+
     <!-- 雷达仿真的 xacro 文件 -->
-    <xacro:include filename="my_sensors_laser.urdf.xacro" />
+    <!-- <xacro:include filename="my_sensors_laser.urdf.xacro" /> -->
+
+    <!-- VLP16 激光雷达 -->
+    <xacro:include filename="$(find robot_description)/urdf/laser_support.xacro" />
+    <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+    <xacro:VLP-16 parent="support" name="velodyne" topic="/velodyne_points" organize_cloud="${organize_cloud}" hz="10" samples="440" gpu="${gpu}">
+          <origin xyz="0 0 ${support_length/2}" rpy="0 0 0" />
+    </xacro:VLP-16>
 
     <!-- 摄像头仿真的 xacro 文件 -->
     <xacro:include filename="my_sensors_camara.urdf.xacro" />
