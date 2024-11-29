@@ -1,14 +1,18 @@
 <!-- 组合小车底盘与传感器 -->
 <robot name="my_car_camera" xmlns:xacro="http://wiki.ros.org/xacro">
-    <xacro:include filename="$(find robot_description)/urdf/my_head.urdf.xacro" />
-    <xacro:include filename="$(find robot_description)/urdf/my_base.urdf.xacro" />
-    <xacro:include filename="$(find robot_description)/urdf/my_camera.urdf.xacro" />
-    <xacro:include filename="$(find robot_description)/urdf/move.urdf.xacro" />
+    <!-- 属性封装 -->
+    <xacro:arg name="gpu" default="true"/>
+    <xacro:property name="gpu" value="$(arg gpu)" />
+    <xacro:arg name="organize_cloud" default="true"/>
+    <xacro:property name="organize_cloud" value="$(arg organize_cloud)" />
+
+    <xacro:include filename="$(find robot_description)/urdf/my_head.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/my_base.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/my_camera.xacro" />
+    <xacro:include filename="$(find robot_description)/urdf/move.xacro" />
 
     <!-- 更新结构信息，以laser_support + velodyne 为构建，不需要自己写雷达仿真的xacro文件 -->
     <!-- <xacro:include filename="my_laser.urdf.xacro" /> -->
-
-    <!-- 雷达仿真的 xacro 文件 -->
     <!-- <xacro:include filename="my_sensors_laser.urdf.xacro" /> -->
 
     <!-- VLP16 激光雷达 -->
@@ -23,4 +27,5 @@
 
     <!-- 摄像头模块 -->
     <xacro:include filename="$(find robot_description)/urdf/my_camera.xacro" />
+
 </robot>
