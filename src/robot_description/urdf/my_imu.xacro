@@ -2,11 +2,12 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu"> 
 
     <!-- IMU 属性 -->
-    <xacro:property name="imu_size"     value="0.1" />
-    <xacro:property name="imu_hight"    value="0.1" />
-    <xacro:property name="imu_x"        value="0.0" />
+    <xacro:property name="imu_length"   value="0.02" /> <!-- IMU长度(x) -->
+    <xacro:property name="imu_width"    value="0.025" /> <!-- IMU宽度(y) -->
+    <xacro:property name="imu_height"   value="0.03" /> <!-- IMU高度(z) -->
+    <xacro:property name="imu_x"        value="-0.08" />
     <xacro:property name="imu_y"        value="0.0" />
-    <xacro:property name="imu_z"        value="0.0" />
+    <xacro:property name="imu_z"        value="${base_link_length / 2 + imu_height / 2}" />
 
     <!-- 默认惯性参数 -->
     <xacro:macro name="default_inertial" params="mass">
@@ -24,12 +25,12 @@
             <visual>
                <origin rpy="0 0 0" xyz="${imu_x} ${imu_y} ${imu_z}" />
                <geometry>
-                    <box size="${imu_size} ${imu_size} ${imu_size}"/>
+                    <box size="${imu_length} ${imu_width} ${imu_height}"/>
                </geometry>                
               <material name="red"/>
             </visual>
             <collision>
-                <box size="${imu_size} ${imu_size} ${imu_size}"/>
+                <box size="${imu_length} ${imu_length} ${imu_height}"/>
             </collision>
         </link>
 
