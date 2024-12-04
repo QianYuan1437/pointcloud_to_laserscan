@@ -4,7 +4,8 @@
 <!-- |    EDITING THIS FILE BY HAND IS NOT RECOMMENDED                                 | -->
 <!-- =================================================================================== -->
 <!-- 组合小车底盘与传感器 -->
-<robot name="my_car_camera">
+<robot name="robot_car">
+  <!-- <xacro:property name="organize_cloud" value="$(arg organize_cloud)" /> -->
   <!-- 宏:黑色设置 -->
   <material name="black">
     <color rgba="0.0 0.0 0.0 1.0"/>
@@ -160,74 +161,6 @@
   </joint>
   <gazebo reference="back_wheel">
     <material>Gazebo/Red</material>
-  </gazebo>
-  <!-- 摄像头安装的z坐标:底盘高度 / 2 + 摄像头高度 / 2  -->
-  <!-- 摄像头质量 -->
-  <!-- 摄像头关节以及link -->
-  <link name="camera">
-    <visual>
-      <geometry>
-        <box size="0.01 0.025 0.025"/>
-      </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-      <material name="black"/>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="0.01 0.025 0.025"/>
-      </geometry>
-      <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
-    </collision>
-    <inertial>
-      <mass value="0.01"/>
-      <inertia ixx="6.041666666666668e-07" ixy="0" ixz="0" iyy="6.041666666666668e-07" iyz="0" izz="1.041666666666667e-06"/>
-    </inertial>
-  </link>
-  <joint name="camera2base_link" type="fixed">
-    <parent link="base_link"/>
-    <child link="camera"/>
-    <origin xyz="0.08 0.0 0.052500000000000005"/>
-  </joint>
-  <!-- Gazebo 配置 -->
-  <gazebo reference="camera">
-    <!-- 摄像头传感器 -->
-    <sensor name="camera_node" type="camera">
-      <update_rate>30.0</update_rate>
-      <!-- 更新频率 -->
-      <camera name="head">
-        <horizontal_fov>1.3962634</horizontal_fov>
-        <!-- 水平视场角 (80°) -->
-        <image>
-          <width>1280</width>
-          <height>720</height>
-          <format>R8G8B8</format>
-        </image>
-        <clip>
-          <near>0.02</near>
-          <far>300</far>
-        </clip>
-        <noise>
-          <type>gaussian</type>
-          <mean>0.0</mean>
-          <stddev>0.007</stddev>
-        </noise>
-      </camera>
-      <!-- 核心插件 -->
-      <plugin filename="libgazebo_ros_camera.so" name="gazebo_camera">
-        <alwaysOn>true</alwaysOn>
-        <updateRate>0.0</updateRate>
-        <cameraName>/camera</cameraName>
-        <imageTopicName>image_raw</imageTopicName>
-        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
-        <frameName>camera</frameName>
-        <hackBaseline>0.07</hackBaseline>
-        <distortionK1>0.0</distortionK1>
-        <distortionK2>0.0</distortionK2>
-        <distortionK3>0.0</distortionK3>
-        <distortionT1>0.0</distortionT1>
-        <distortionT2>0.0</distortionT2>
-      </plugin>
-    </sensor>
   </gazebo>
   <!-- Transmission is important to link the joints and the controller -->
   <transmission name="left_wheel2base_link_trans">
@@ -390,18 +323,56 @@
         </range>
         <noise>
           <type>gaussian</type>
-          <mean>0.00</mean>
-          <stddev>0.0001</stddev>
+          <mean>0.0</mean>
+          <stddev>0.0</stddev>
         </noise>
       </ray>
       <plugin filename="libgazebo_ros_velodyne_gpu_laser.so" name="gazebo_ros_laser_controller">
         <topicName>/velodyne_points</topicName>
         <frameName>velodyne</frameName>
-        <organize_cloud>True</organize_cloud>
         <min_range>0.9</min_range>
         <max_range>130.0</max_range>
-        <gaussianNoise>0.0001</gaussianNoise>
+        <gaussianNoise>0.008</gaussianNoise>
       </plugin>
+    </sensor>
+  </gazebo>
+  <!-- IMU 链接 -->
+  <link name="imu_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="-0.08 0.0 0.05625"/>
+      <geometry>
+        <box size="0.01 0.025 0.0325"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <box size="0.01 0.025 0.0325"/>
+    </collision>
+  </link>
+  <!-- 关节连接 imu_link 和 base_link -->
+  <joint name="imu_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin rpy="0 0 0" xyz="-0.08 0.0 0.05625"/>
+  </joint>
+  <!-- Gazebo 配置 -->
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>100.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
     </sensor>
   </gazebo>
   <!-- 摄像头安装的z坐标:底盘高度 / 2 + 摄像头高度 / 2  -->

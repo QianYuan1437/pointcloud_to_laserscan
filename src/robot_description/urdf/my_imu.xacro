@@ -2,12 +2,14 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="imu"> 
 
     <!-- IMU 属性 -->
-    <xacro:property name="imu_length"   value="0.02" /> <!-- IMU长度(x) -->
+    <xacro:property name="imu_length"   value="0.01" /> <!-- IMU长度(x) -->
     <xacro:property name="imu_width"    value="0.025" /> <!-- IMU宽度(y) -->
-    <xacro:property name="imu_height"   value="0.03" /> <!-- IMU高度(z) -->
+    <xacro:property name="imu_height"   value="0.025" /> <!-- IMU高度(z) -->
     <xacro:property name="imu_x"        value="-0.08" />
     <xacro:property name="imu_y"        value="0.0" />
     <xacro:property name="imu_z"        value="${base_link_length / 2 + imu_height / 2}" />
+
+    <xacro:property name="imu_m" value="0.01" /> <!-- IMU质量 -->
 
     <!-- 默认惯性参数 -->
     <xacro:macro name="default_inertial" params="mass">
@@ -23,15 +25,19 @@
         <!-- IMU 链接 -->
         <link name="imu_link">
             <visual>
-               <origin rpy="0 0 0" xyz="${imu_x} ${imu_y} ${imu_z}" />
-               <geometry>
+                <geometry>
                     <box size="${imu_length} ${imu_width} ${imu_height}"/>
-               </geometry>                
-              <material name="red"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0" />                
+                <material name="red"/>
             </visual>
             <collision>
-                <box size="${imu_length} ${imu_length} ${imu_height}"/>
+                <geometry>
+                    <box size="${imu_length} ${imu_width} ${imu_height}"/>
+                </geometry>
+                <origin rpy="0 0 0" xyz="0 0 0" />
             </collision>
+            <xacro:Box_inertial_matrix m="${imu_m}" l="${imu_length}" w="${imu_width}" h="${imu_height}" />
         </link>
 
         <!-- 关节连接 imu_link 和 base_link -->

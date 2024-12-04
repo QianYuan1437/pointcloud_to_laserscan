@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
 <launch>
-    <arg name="paused" default="false"/>
+    <!-- <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
     <arg name="gui" default="true"/>
     <arg name="headless" default="false"/>
     <arg name="debug" default="false"/>
     <arg name="verbose" default="false"/>
-    <arg name="world_name" default="$(find robot_description)/world/lab.world"/>
+    <arg name="world_name" default="$(find robot_description)/world/lab.world"/> -->
 
     <!-- Start gazebo and load the world -->
-    <include file="$(find gazebo_ros)/launch/empty_world.launch" >
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" >
         <arg name="paused" value="$(arg paused)"/>
         <arg name="use_sim_time" value="$(arg use_sim_time)"/>
         <arg name="gui" value="$(arg gui)"/>
@@ -17,11 +17,16 @@
         <arg name="debug" value="$(arg debug)"/>
         <arg name="verbose" value="$(arg verbose)"/>
         <arg name="world_name" value="$(arg world_name)"/>
-    </include>
+    </include> -->
 
     <!-- 设置参数 -->
-    <param name="robot_description" textfile="$(find robot_description)/urdf/car.urdf" />
-    <!-- <param name="robot_description" command="$(find xacro)/xacro $(find robot_description)/urdf/car.xacro" /> -->
+    <!-- <param name="robot_description" textfile="$(find robot_description)/urdf/car.urdf" /> -->
+    <!-- <param name="robot_description" command="$(find xacro)/xacro $(find robot_description)/urdf/robot_car.xacro" /> -->
+
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <arg name = "my_car" default = "$(find robot_description)/urdf/robot_car.xacro" />
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro $(arg my_car)" />
 
     <!-- 添加关节状态发布节点 -->
     <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher" />
