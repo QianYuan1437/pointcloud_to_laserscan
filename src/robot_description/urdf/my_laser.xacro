@@ -4,7 +4,7 @@
 <robot name="my_laser" xmlns:xacro="http://wiki.ros.org/xacro">
 
     <!-- 雷达支架 -->
-    <xacro:property name="support_length" value="0.15" /> <!-- 支架长度 -->
+    <xacro:property name="support_length" value="0.10" /> <!-- 支架长度 -->
     <xacro:property name="support_radius" value="0.01" /> <!-- 支架半径 -->
     <xacro:property name="support_x" value="0.0" /> <!-- 支架安装的x坐标 -->
     <xacro:property name="support_y" value="0.0" /> <!-- 支架安装的y坐标 -->

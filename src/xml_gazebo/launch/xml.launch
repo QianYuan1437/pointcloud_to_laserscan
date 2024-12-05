@@ -1,0 +1,11 @@
+<launch>
+    <!-- Start Gazebo and load the specified world file -->
+    <!-- <arg name="world_file" default="$(find xml_gazebo)/world/real.world" /> -->
+    <!-- <arg name="world_file" default="$(find xml_gazebo)/world/test.world" /> -->
+    <arg name="world_file" default="$(find robot_description)/world/lab.world" />
+
+    <!-- Launch Gazebo with the specified world file -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_file)" />
+    </include>
+</launch>

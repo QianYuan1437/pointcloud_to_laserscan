@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<world name="test_world">
+
+  <!-- Lighting setup: Define a directional light source (sun) -->
+  <light name="sun" type="directional">
+    <pose>0 0 10 0 0 0</pose> <!-- Position the light source above the origin -->
+    <diffuse>1 1 1 1</diffuse> <!-- Light color: white -->
+    <specular>0.5 0.5 0.5 1</specular> <!-- Specular light properties -->
+    <attenuation>
+      <range>100</range> <!-- Attenuation properties -->
+      <constant>0.9</constant>
+      <linear>0.01</linear>
+      <quadratic>0.001</quadratic>
+    </attenuation>
+  </light>
+
+  <!-- Ground plane: Create a flat plane (20x20 meters) as the ground -->
+  <model name="ground_plane">
+    <pose>0 0 0 0 0 0</pose> <!-- Place the ground at the origin -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal> <!-- Define the normal of the plane to face upward -->
+            <size>20 20</size> <!-- Size of the plane: 20 meters by 20 meters -->
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>20 20</size> <!-- Size of the plane -->
+          </plane>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- Create a red solid cube at the origin -->
+  <model name="red_cube">
+    <pose>0 0 0.005 0 0 0</pose> <!-- Position the cube at the origin with a slight offset to hover above the ground -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.01</size> <!-- Size of the cube: 0.1m x 0.1m x 0.01m -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.01</size> <!-- Size of the cube -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient> <!-- Color: Red -->
+          <diffuse>1 0 0 1</diffuse> <!-- Red color for the cube -->
+        </material>
+      </visual>
+    </link>
+  </model>
+
+</world>

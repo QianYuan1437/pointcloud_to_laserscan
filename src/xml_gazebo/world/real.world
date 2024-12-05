@@ -1,0 +1,4888 @@
+<?xml version="1.0" ?>
+<world name="盘条">
+  <!-- Lighting setup -->
+  <light name="sun" type="directional">
+    <pose>0 0 10 0 0 0</pose>
+    <diffuse>1 1 1 1</diffuse>
+    <specular>0.5 0.5 0.5 1</specular>
+    <attenuation>
+      <range>100</range>
+      <constant>0.9</constant>
+      <linear>0.01</linear>
+      <quadratic>0.001</quadratic>
+    </attenuation>
+  </light>
+
+  <!-- Ground plane -->
+  <model name="ground_plane">
+    <pose>0 0 0 0 0 0</pose>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 100</size>
+          </plane>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+
+  <!-- Point 0 from XML -->
+  <model name="point_0">
+    <pose>300 300 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 1 from XML -->
+  <model name="point_1">
+    <pose>302.3 300 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 2 from XML -->
+  <model name="point_2">
+    <pose>295.524 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 3 from XML -->
+  <model name="point_3">
+    <pose>295.516 305.843 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 4 from XML -->
+  <model name="point_4">
+    <pose>295.516 307.806 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 5 from XML -->
+  <model name="point_5">
+    <pose>295.52 318.056 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 6 from XML -->
+  <model name="point_6">
+    <pose>295.524 311.928 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 7 from XML -->
+  <model name="point_7">
+    <pose>295.46 313.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 8 from XML -->
+  <model name="point_8">
+    <pose>295.5 320.009 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 9 from XML -->
+  <model name="point_9">
+    <pose>302.3 304.916 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 10 from XML -->
+  <model name="point_10">
+    <pose>302.3 306.813 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 11 from XML -->
+  <model name="point_11">
+    <pose>302.3 308.714 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 12 from XML -->
+  <model name="point_12">
+    <pose>302.3 311.011 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 13 from XML -->
+  <model name="point_13">
+    <pose>302.3 312.909 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 14 from XML -->
+  <model name="point_14">
+    <pose>302.3 314.809 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 15 from XML -->
+  <model name="point_15">
+    <pose>302.3 317.11 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 16 from XML -->
+  <model name="point_16">
+    <pose>302.3 319.005 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 17 from XML -->
+  <model name="point_17">
+    <pose>302.3 320.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 18 from XML -->
+  <model name="point_18">
+    <pose>302.3 323.204 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 19 from XML -->
+  <model name="point_19">
+    <pose>302.3 325.108 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 20 from XML -->
+  <model name="point_20">
+    <pose>302.3 331.667 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 21 from XML -->
+  <model name="point_21">
+    <pose>302.3 333.568 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 22 from XML -->
+  <model name="point_22">
+    <pose>302.3 335.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 23 from XML -->
+  <model name="point_23">
+    <pose>302.3 337.818 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 24 from XML -->
+  <model name="point_24">
+    <pose>302.3 339.735 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 25 from XML -->
+  <model name="point_25">
+    <pose>302.3 341.635 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 26 from XML -->
+  <model name="point_26">
+    <pose>302.3 343.865 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 27 from XML -->
+  <model name="point_27">
+    <pose>302.3 345.766 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 28 from XML -->
+  <model name="point_28">
+    <pose>302.3 347.664 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 29 from XML -->
+  <model name="point_29">
+    <pose>300 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 30 from XML -->
+  <model name="point_30">
+    <pose>300 305.843 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 31 from XML -->
+  <model name="point_31">
+    <pose>300 307.806 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 32 from XML -->
+  <model name="point_32">
+    <pose>300 311.928 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 33 from XML -->
+  <model name="point_33">
+    <pose>300 313.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 34 from XML -->
+  <model name="point_34">
+    <pose>300 318.056 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 35 from XML -->
+  <model name="point_35">
+    <pose>300 320.009 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 36 from XML -->
+  <model name="point_36">
+    <pose>302.3 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 37 from XML -->
+  <model name="point_37">
+    <pose>305.08 304.916 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 38 from XML -->
+  <model name="point_38">
+    <pose>305.08 306.813 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 39 from XML -->
+  <model name="point_39">
+    <pose>305.08 308.714 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 40 from XML -->
+  <model name="point_40">
+    <pose>305.08 311.011 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 41 from XML -->
+  <model name="point_41">
+    <pose>305.08 312.909 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 42 from XML -->
+  <model name="point_42">
+    <pose>305.08 314.809 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 43 from XML -->
+  <model name="point_43">
+    <pose>305.08 317.11 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 44 from XML -->
+  <model name="point_44">
+    <pose>305.08 319.005 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 45 from XML -->
+  <model name="point_45">
+    <pose>305.08 320.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 46 from XML -->
+  <model name="point_46">
+    <pose>305.08 323.204 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 47 from XML -->
+  <model name="point_47">
+    <pose>305.08 325.108 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 48 from XML -->
+  <model name="point_48">
+    <pose>305.08 331.667 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 49 from XML -->
+  <model name="point_49">
+    <pose>305.08 333.568 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 50 from XML -->
+  <model name="point_50">
+    <pose>305.08 335.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 51 from XML -->
+  <model name="point_51">
+    <pose>305.08 337.818 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 52 from XML -->
+  <model name="point_52">
+    <pose>305.08 339.735 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 53 from XML -->
+  <model name="point_53">
+    <pose>305.08 341.635 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 54 from XML -->
+  <model name="point_54">
+    <pose>305.08 343.865 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 55 from XML -->
+  <model name="point_55">
+    <pose>305.08 345.766 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 56 from XML -->
+  <model name="point_56">
+    <pose>305.08 347.664 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 57 from XML -->
+  <model name="point_57">
+    <pose>302.3 350.6 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 58 from XML -->
+  <model name="point_58">
+    <pose>305.08 350.6 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 59 from XML -->
+  <model name="point_59">
+    <pose>305.08 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 60 from XML -->
+  <model name="point_60">
+    <pose>302.3 302.41 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 61 from XML -->
+  <model name="point_61">
+    <pose>302.3 305.843 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 62 from XML -->
+  <model name="point_62">
+    <pose>302.3 307.806 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 63 from XML -->
+  <model name="point_63">
+    <pose>302.3 310.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 64 from XML -->
+  <model name="point_64">
+    <pose>302.3 311.928 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 65 from XML -->
+  <model name="point_65">
+    <pose>302.3 316.95 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 66 from XML -->
+  <model name="point_66">
+    <pose>302.3 318.056 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 67 from XML -->
+  <model name="point_67">
+    <pose>302.3 320.009 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 68 from XML -->
+  <model name="point_68">
+    <pose>302.3 324.145 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 69 from XML -->
+  <model name="point_69">
+    <pose>302.3 328.275 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 70 from XML -->
+  <model name="point_70">
+    <pose>302.3 329.958 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 71 from XML -->
+  <model name="point_71">
+    <pose>302.3 334.564 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 72 from XML -->
+  <model name="point_72">
+    <pose>302.3 337.692 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 73 from XML -->
+  <model name="point_73">
+    <pose>302.3 340.663 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 74 from XML -->
+  <model name="point_74">
+    <pose>302.3 343.676 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 75 from XML -->
+  <model name="point_75">
+    <pose>302.3 344.805 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 76 from XML -->
+  <model name="point_76">
+    <pose>302.3 346.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 77 from XML -->
+  <model name="point_77">
+    <pose>302.3 350.419 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 78 from XML -->
+  <model name="point_78">
+    <pose>295.508 324.145 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 79 from XML -->
+  <model name="point_79">
+    <pose>295.506 328.457 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 80 from XML -->
+  <model name="point_80">
+    <pose>295.516 332.605 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 81 from XML -->
+  <model name="point_81">
+    <pose>295.513 334.564 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 82 from XML -->
+  <model name="point_82">
+    <pose>295.516 338.705 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 83 from XML -->
+  <model name="point_83">
+    <pose>295.51 340.663 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 84 from XML -->
+  <model name="point_84">
+    <pose>295.516 344.805 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 85 from XML -->
+  <model name="point_85">
+    <pose>295.518 346.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 86 from XML -->
+  <model name="point_86">
+    <pose>295.516 350.92 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 87 from XML -->
+  <model name="point_87">
+    <pose>300 324.145 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 88 from XML -->
+  <model name="point_88">
+    <pose>300 328.457 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 89 from XML -->
+  <model name="point_89">
+    <pose>300 332.605 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 90 from XML -->
+  <model name="point_90">
+    <pose>300 334.564 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 91 from XML -->
+  <model name="point_91">
+    <pose>300 338.705 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 92 from XML -->
+  <model name="point_92">
+    <pose>300 340.663 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 93 from XML -->
+  <model name="point_93">
+    <pose>300 344.805 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 94 from XML -->
+  <model name="point_94">
+    <pose>300 346.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 95 from XML -->
+  <model name="point_95">
+    <pose>300 350.92 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 96 from XML -->
+  <model name="point_96">
+    <pose>302.3 322.964 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 97 from XML -->
+  <model name="point_97">
+    <pose>302.3 333 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 98 from XML -->
+  <model name="point_98">
+    <pose>302.3 338.705 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 99 from XML -->
+  <model name="point_99">
+    <pose>301.2 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 100 from XML -->
+  <model name="point_100">
+    <pose>302.3 354.352 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 101 from XML -->
+  <model name="point_101">
+    <pose>301.2 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 102 from XML -->
+  <model name="point_102">
+    <pose>299.501 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 103 from XML -->
+  <model name="point_103">
+    <pose>297.806 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 104 from XML -->
+  <model name="point_104">
+    <pose>296.107 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 105 from XML -->
+  <model name="point_105">
+    <pose>294.408 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 106 from XML -->
+  <model name="point_106">
+    <pose>292.708 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 107 from XML -->
+  <model name="point_107">
+    <pose>301.2 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 108 from XML -->
+  <model name="point_108">
+    <pose>301.2 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 109 from XML -->
+  <model name="point_109">
+    <pose>299.501 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 110 from XML -->
+  <model name="point_110">
+    <pose>297.806 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 111 from XML -->
+  <model name="point_111">
+    <pose>296.107 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 112 from XML -->
+  <model name="point_112">
+    <pose>294.408 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 113 from XML -->
+  <model name="point_113">
+    <pose>292.708 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 114 from XML -->
+  <model name="point_114">
+    <pose>299.501 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 115 from XML -->
+  <model name="point_115">
+    <pose>296.107 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 116 from XML -->
+  <model name="point_116">
+    <pose>294.408 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 117 from XML -->
+  <model name="point_117">
+    <pose>292.708 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 118 from XML -->
+  <model name="point_118">
+    <pose>299.501 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 119 from XML -->
+  <model name="point_119">
+    <pose>297.806 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 120 from XML -->
+  <model name="point_120">
+    <pose>296.107 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 121 from XML -->
+  <model name="point_121">
+    <pose>294.408 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 122 from XML -->
+  <model name="point_122">
+    <pose>292.708 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 123 from XML -->
+  <model name="point_123">
+    <pose>300 354 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 124 from XML -->
+  <model name="point_124">
+    <pose>302.3 360 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 125 from XML -->
+  <model name="point_125">
+    <pose>302.3 350.92 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 126 from XML -->
+  <model name="point_126">
+    <pose>298 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 127 from XML -->
+  <model name="point_127">
+    <pose>298 305.843 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 128 from XML -->
+  <model name="point_128">
+    <pose>298 307.806 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 129 from XML -->
+  <model name="point_129">
+    <pose>298 311.928 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 130 from XML -->
+  <model name="point_130">
+    <pose>298 313.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 131 from XML -->
+  <model name="point_131">
+    <pose>298 318.056 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 132 from XML -->
+  <model name="point_132">
+    <pose>298 320.009 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 133 from XML -->
+  <model name="point_133">
+    <pose>298 324.145 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 134 from XML -->
+  <model name="point_134">
+    <pose>298 328.457 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 135 from XML -->
+  <model name="point_135">
+    <pose>298 332.605 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 136 from XML -->
+  <model name="point_136">
+    <pose>298 334.564 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 137 from XML -->
+  <model name="point_137">
+    <pose>298 338.705 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 138 from XML -->
+  <model name="point_138">
+    <pose>298 340.663 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 139 from XML -->
+  <model name="point_139">
+    <pose>298 344.805 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 140 from XML -->
+  <model name="point_140">
+    <pose>298 346.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 141 from XML -->
+  <model name="point_141">
+    <pose>298 350.92 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 142 from XML -->
+  <model name="point_142">
+    <pose>302.3 313.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 143 from XML -->
+  <model name="point_143">
+    <pose>297.806 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 144 from XML -->
+  <model name="point_144">
+    <pose>300.425 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 145 from XML -->
+  <model name="point_145">
+    <pose>300 352.3 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 146 from XML -->
+  <model name="point_146">
+    <pose>296.5 301.698 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 147 from XML -->
+  <model name="point_147">
+    <pose>296.5 305.843 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 148 from XML -->
+  <model name="point_148">
+    <pose>296.5 307.806 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 149 from XML -->
+  <model name="point_149">
+    <pose>296.5 311.928 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 150 from XML -->
+  <model name="point_150">
+    <pose>296.5 313.91 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 151 from XML -->
+  <model name="point_151">
+    <pose>296.5 318.056 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 152 from XML -->
+  <model name="point_152">
+    <pose>296.5 320.009 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 153 from XML -->
+  <model name="point_153">
+    <pose>296.5 324.145 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 154 from XML -->
+  <model name="point_154">
+    <pose>296.5 328.457 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 155 from XML -->
+  <model name="point_155">
+    <pose>296.5 332.605 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 156 from XML -->
+  <model name="point_156">
+    <pose>296.5 334.564 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 157 from XML -->
+  <model name="point_157">
+    <pose>296.5 338.705 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 158 from XML -->
+  <model name="point_158">
+    <pose>296.5 340.663 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 159 from XML -->
+  <model name="point_159">
+    <pose>296.5 344.805 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 160 from XML -->
+  <model name="point_160">
+    <pose>296.5 346.762 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 161 from XML -->
+  <model name="point_161">
+    <pose>296.5 350.92 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 162 from XML -->
+  <model name="point_162">
+    <pose>297.494 359 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 163 from XML -->
+  <model name="point_163">
+    <pose>297.494 354.04 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 164 from XML -->
+  <model name="point_164">
+    <pose>291.008 370.518 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 165 from XML -->
+  <model name="point_165">
+    <pose>291.008 369.436 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 166 from XML -->
+  <model name="point_166">
+    <pose>291.008 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 167 from XML -->
+  <model name="point_167">
+    <pose>290.4 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 168 from XML -->
+  <model name="point_168">
+    <pose>291.008 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 169 from XML -->
+  <model name="point_169">
+    <pose>290.4 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 170 from XML -->
+  <model name="point_170">
+    <pose>289.794 368.466 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 171 from XML -->
+  <model name="point_171">
+    <pose>289.753 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 172 from XML -->
+  <model name="point_172">
+    <pose>300 333 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 173 from XML -->
+  <model name="point_173">
+    <pose>298.9 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 174 from XML -->
+  <model name="point_174">
+    <pose>298.9 359 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 175 from XML -->
+  <model name="point_175">
+    <pose>300 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 176 from XML -->
+  <model name="point_176">
+    <pose>301.2 360 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 177 from XML -->
+  <model name="point_177">
+    <pose>298.9 362 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 178 from XML -->
+  <model name="point_178">
+    <pose>301.2 362 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 179 from XML -->
+  <model name="point_179">
+    <pose>298.9 364.41 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 180 from XML -->
+  <model name="point_180">
+    <pose>301.2 364.393 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 181 from XML -->
+  <model name="point_181">
+    <pose>298.9 366.317 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 182 from XML -->
+  <model name="point_182">
+    <pose>297.494 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 183 from XML -->
+  <model name="point_183">
+    <pose>292.327 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 184 from XML -->
+  <model name="point_184">
+    <pose>292.327 354 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 185 from XML -->
+  <model name="point_185">
+    <pose>292.327 356 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 186 from XML -->
+  <model name="point_186">
+    <pose>290.526 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 187 from XML -->
+  <model name="point_187">
+    <pose>290.526 356 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 188 from XML -->
+  <model name="point_188">
+    <pose>290.526 354 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 189 from XML -->
+  <model name="point_189">
+    <pose>295.44 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 190 from XML -->
+  <model name="point_190">
+    <pose>297.494 356 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 191 from XML -->
+  <model name="point_191">
+    <pose>288.716 354.004 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 192 from XML -->
+  <model name="point_192">
+    <pose>288.716 357 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    
+  <!-- Point 193 from XML -->
+  <model name="point_193">
+    <pose>288.716 356 0.25 0 0 0</pose> <!-- Using xpos, ypos, and a fixed height -->
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.5 0.5 0.1</size> <!-- width, height -->
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.7 0.7 0.7 1</ambient>
+          <diffuse>0.7 0.7 0.7 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+    </world>
