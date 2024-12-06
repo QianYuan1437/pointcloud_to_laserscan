@@ -29,8 +29,8 @@ def save_to_csv(data, output_file):
 if __name__ == "__main__":
 
     # 设置输入输出文件路径
-    xml_file = '../xml/FF.xml'  # 输入你的 XML 文件路径
-    output_file = '../csv/id_pose.csv'
+    xml_file = '/home/zhao/WS/msfl_ws/src/xml_gazebo/xml/FF.xml'  # 输入的 XML 文件路径
+    output_file = '/home/zhao/WS/msfl_ws/src/xml_gazebo/csv/id_pose.csv' # 输入的 CSV 文件路径
 
     # 检查是否存在输入输出文件夹
     if not os.path.exists(os.path.dirname(output_file)):
