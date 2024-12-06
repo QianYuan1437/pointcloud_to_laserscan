@@ -1,0 +1,24 @@
+<launch>
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <arg name = "real" default = "$(find xml_gazebo)/urdf/real.xacro" />
+
+    <param name="xml_gazebo" command="$(find xacro)/xacro $(arg real)" />
+
+    <!-- 运行joint_state_publisher节点，发布机器人的关节状态  -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node> 
+
+    <!-- 运行robot_state_publisher节点，发布tf  -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  output="screen" >
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node>
+
+    <!-- Start Gazebo with an empty world -->
+    <arg name="world_file" default="$(find gazebo_ros)/worlds/empty.world" />
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_file)" />
+    </include>
+
+    <!-- Spawn the robot model in Gazebo -->
+    <node name="spawn_red_cube_robot" pkg="gazebo_ros" type="spawn_model" args="-urdf -model real -param robot_description" />
+</launch>
