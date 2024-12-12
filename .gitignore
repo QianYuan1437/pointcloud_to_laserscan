@@ -5,3 +5,4 @@ data/ROSBAG/
 .catkin_tools/
 .git/
 .vscode/
+.catkin_workspace
