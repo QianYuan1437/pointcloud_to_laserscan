@@ -1,4 +1,8 @@
 # 忽略 build 和 devel 文件夹
 build/
 devel/
-data/
+data/ROSBAG/
+.catkin_tools/
+.git/
+.vscode/
+.gitignore
