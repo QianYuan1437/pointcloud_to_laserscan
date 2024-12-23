@@ -1,3 +1,6 @@
 [submodule "src/A-LOAM-NOTED"]
 	url = https://github.com/QianYuan1437/A-LOAM-NOTED.git
 	branch = ubuntu20.04-mods
+[submodule "src/LIO-SAM"]
+	url = https://github.com/QianYuan1437/LIO-SAM.git
+	branch = ubuntu20.04-mods
