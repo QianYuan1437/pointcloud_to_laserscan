@@ -1,0 +1,3 @@
+[submodule "src/A-LOAM-NOTED"]
+	url = https://github.com/QianYuan1437/A-LOAM-NOTED.git
+	branch = ubuntu20.04-mods
