@@ -2,6 +2,7 @@
 build/
 devel/
 data/ROSBAG/
+data/
 .catkin_tools/
 .git/
 .vscode/
