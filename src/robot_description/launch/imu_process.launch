@@ -1,0 +1,8 @@
+<launch>
+
+    <!-- 启动 imu_process 节点 -->
+    <!-- <node name="imu_process" pkg="robot_description" type="imu_process" output="screen" /> -->
+    <!-- 不在终端显示输出内容 -->
+    <node name="imu_process" pkg="robot_description" type="imu_process" output="log" />
+
+</launch>
